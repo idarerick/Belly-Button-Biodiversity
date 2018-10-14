@@ -9,10 +9,10 @@ function buildMetadata(sample) {
     var $sampleMetadata = document.getElementById("sample-metadata");
       d3.json(url).then(function(response) {
       console.log(response);
-      var items = Object.keys(response);
+      var items = Object.entries(response);
         for (var i=0; i<items.length; i++) {
+          $p.HTML = (""); 
           var $p = document.createElement("p");
-          $p.innerHTML = (""); 
           $p.setAttribute("class","center-text");
           $p.innerHTML = `${items[i]}:${response[items[i]]}`;
           $sampleMetadata.appendChild($p);
