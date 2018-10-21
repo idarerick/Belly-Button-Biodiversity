@@ -11,7 +11,7 @@ function buildMetadata(sample) {
       console.log(response);
       var items = Object.entries(response);
         for (var i=0; i<items.length; i++) {
-          $p.HTML = (""); 
+          $p.html = (""); 
           var $p = document.createElement("p");
           $p.setAttribute("class","center-text");
           $p.innerHTML = `${items[i]}:${response[items[i]]}`;
